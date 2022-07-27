@@ -1,0 +1,17 @@
+<!-- drawable/input.xml -->
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape>
+            <stroke
+                android:width="2dp"
+                android:color="@color/purple_200"
+                />
+            <corners
+                android:radius="30dp"/>
+            <solid
+                android:color="#E6E6FA"/>
+        </shape>
+    </item>
+</selector>

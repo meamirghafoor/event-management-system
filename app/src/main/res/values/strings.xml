@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Event Planer</string>
+    <string name="title_activity_home">home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Event Planer</string>
+    <string name="nav_header_subtitle">event.planer@gmail.com</string>
+    <string name="nav_header_desc">Event Planer</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_venue">Venue</string>
+    <string name="menu_food">Services</string>
+    <string name="menu_Music">Equipments</string>
+    <string name="menu_book">Book Event</string>
+    <string name="menu_cancle">Cancle Event</string>
+    <string name="menu_logout">logout</string>
+    <string name="about">Event management is the application of project management to the creation and development of small and or large-scale personal or corporate events such as festivals, conferences, ceremonies, weddings, formal parties, concerts, or conventions.</string>
+</resources>
