@@ -6,6 +6,11 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_cancle"
+        android:name="com.example.event_management.ui.booked_event.Fragment_booked_event"
+        android:label="Booked Events"
+        tools:layout="@layout/fragment_booked_event" />
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.example.event_management.ui.home.HomeFragment"
         android:label="@string/menu_home"

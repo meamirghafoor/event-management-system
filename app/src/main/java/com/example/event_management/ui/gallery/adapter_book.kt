@@ -1,10 +1,17 @@
-package com.example.event_management
+package com.example.event_management.ui.gallery
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.food.view.*
+import com.example.event_management.R
+import com.example.event_management.home
+import kotlinx.android.synthetic.main.booked_card.view.*
+import kotlinx.android.synthetic.main.booked_card.view.img
+import kotlinx.android.synthetic.main.booked_card.view.txt
+import kotlinx.android.synthetic.main.card_list.view.*
 
 class MyAdapter (val arrayList: ArrayList<Model>, val context: Context) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
@@ -17,7 +24,7 @@ class MyAdapter (val arrayList: ArrayList<Model>, val context: Context) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v= LayoutInflater.from(parent.context).inflate(R.layout.food,parent,false)
+        val v= LayoutInflater.from(parent.context).inflate(R.layout.card_list,parent,false)
         return ViewHolder(v)
     }
 
@@ -27,5 +34,14 @@ class MyAdapter (val arrayList: ArrayList<Model>, val context: Context) :
 
     override fun getItemCount(): Int {
         return arrayList.size
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int, payloads: MutableList<Any>) {
+        super.onBindViewHolder(holder, position, payloads)
+        holder.itemView.setOnClickListener(){
+            if(position==0){
+               // startActivity(Intent(this, com.example.event_management.home::class.java))
+            }
+        }
     }
 }

@@ -5,12 +5,18 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context=".ui.book.Fragment_book">
-
     <RelativeLayout
         android:id="@+id/main_header"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <TextView
+            android:id="@+id/main_id_book"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:text="title"
+            android:textSize="1dp"
+            tools:ignore="MissingConstraints" />
         <TextView
             android:id="@+id/text1"
             android:layout_width="wrap_content"
@@ -267,9 +273,20 @@ tools:context=".ui.book.Fragment_book">
             android:background="@drawable/input_style"
             android:hint="Enter strength"
             android:paddingLeft="20dp" />
+        <EditText
+            android:id="@+id/ed2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/ed1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/input_style"
+            android:hint="Enter your username"
+            android:paddingLeft="20dp" />
 
         <Button
-            android:id="@+id/btnlogin"
+            android:id="@+id/bookbtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:backgroundTint="@color/purple_500"
@@ -281,6 +298,6 @@ tools:context=".ui.book.Fragment_book">
             android:text="Book"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_below="@+id/ed1"/>
+            android:layout_below="@+id/ed2"/>
     </RelativeLayout>
 </ScrollView>

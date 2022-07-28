@@ -16,4 +16,6 @@
     <string name="menu_cancle">Cancle Event</string>
     <string name="menu_logout">logout</string>
     <string name="about">Event management is the application of project management to the creation and development of small and or large-scale personal or corporate events such as festivals, conferences, ceremonies, weddings, formal parties, concerts, or conventions.</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_mapview">Mapview</string>
 </resources>

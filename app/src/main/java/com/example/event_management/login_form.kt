@@ -1,14 +1,18 @@
 package com.example.event_management
+
+import android.R
 import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.event_management.databinding.ActivityLoginFormBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.fragment_book.*
+
 
 class login_form : AppCompatActivity() {
     private lateinit var bind : ActivityLoginFormBinding
@@ -46,10 +50,18 @@ class login_form : AppCompatActivity() {
             if(it.exists()){
                 var psswrd:String=it.child("pasword").value.toString()
                 var name:String=it.child("name").value.toString()
+                var email:String=it.child("email").value.toString()
                 if(password.equals(psswrd)){
                     progress.dismiss()
-                    startActivity(Intent(this,home::class.java).putExtra("username",username))
+                    val intent = Intent(this, home::class.java)
+                    val extras = Bundle()
+                    extras.putString("username", username)
+                    extras.putString("name", name)
+                    extras.putString("email", email)
+                    intent.putExtras(extras)
+                    startActivity(intent)
                 }else{
+                    progress.dismiss()
                     var ad = AlertDialog.Builder(this)
                     ad.setTitle("Message")
                     ad.setMessage("Failed to login")

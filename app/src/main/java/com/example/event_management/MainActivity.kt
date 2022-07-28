@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             var email=binding.ed3.text.toString()
             if(name.isNotEmpty() && username.isNotEmpty() && password.isNotEmpty()&& contact.isNotEmpty()&& email.isNotEmpty() && binding.img.drawable !=null) {
                 //code of insert data into firebase
-                db = FirebaseDatabase.getInstance().getReference("Users")
                 val user = Firebase_Data(name, username, password,contact,email,imguri.toString())
                 db=FirebaseDatabase.getInstance().getReference("Users")
                 db.child(username).get().addOnSuccessListener {
